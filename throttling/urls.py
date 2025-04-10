@@ -20,6 +20,7 @@ from rest_framework.routers import DefaultRouter
 from api import views
 from scoped import views as v2
 from filter import views as v3
+from serachfilter import views as v4
 router=DefaultRouter()
 router.register('studentroutermodel',views.StudentModelViewSet,basename='stu')
 urlpatterns = [
@@ -32,4 +33,5 @@ urlpatterns = [
     path('studentupdate/<int:pk>/',v2.StudentUpdate.as_view()),
     path('studentdestory/<int:pk>/',v2.Studentdelete.as_view()),
     path('studentapi/',v3.StudentList.as_view()),
+    path('studentsearchapi/',v4.StudentList.as_view()),
 ]

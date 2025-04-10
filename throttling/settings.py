@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api',
     'scoped',
     'filter',
+    'serachfilter',
 
 ]
 
@@ -135,4 +136,9 @@ REST_FRAMEWORK={
         'viewstu':'5/hour',
         'modifystu':'2/day',
     }
+}
+
+
+REST_FRAMEWORK={
+    'SEARCH_PARAM':'q'
 }
